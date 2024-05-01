@@ -41,10 +41,10 @@ I’m including one of their sample “calc” exploit payloads since hiding
 it really doesn’t do much to determined attackers.
 
 When you `load()` an R data file directly into your R session into the
-global environment, the object, well, load there. So, if it has an
-object named `print` that’s going to be in your global environment and
-get called when `print()` gets called. Lather/rinse/repeat for any other
-object name. It should be pretty obvious how this could be abused.
+global environment, the object will, well, *load there*. So, if it has
+an object named `print` that’s going to be in your global environment
+and get called when `print()` gets called. Lather/rinse/repeat for any
+other object name. It should be pretty obvious how this could be abused.
 
 A tad more insidious is what happens when you quit R. By default, on
 `quit()`, unless you specify otherwise, that function invocation will
@@ -106,10 +106,10 @@ Example output for the `exploit.rda` file:
 
     .Last : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x116687348> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x11ebc5d48> 
     quit : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x116687348> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x11ebc5d48> 
 
     ------------------------------------
     Functions found: enumerating sources
@@ -177,10 +177,10 @@ Example output for the `exploit.rda` file:
 
     .Last : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaad6d8b568> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaacbe66568> 
     quit : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaad6d8b568> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaacbe66568> 
 
     ------------------------------------
     Functions found: enumerating sources

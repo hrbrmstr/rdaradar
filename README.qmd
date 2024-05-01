@@ -24,7 +24,7 @@ However, the "weakness" is by no means closed.
 
 I'm including one of their sample "calc" exploit payloads since hiding it really doesn't do much to determined attackers.
 
-When you `load()` an R data file directly into your R session into the global environment, the object, well, load there. So, if it has an object named `print` that's going to be in your global environment and get called when `print()` gets called. Lather/rinse/repeat for any other object name. It should be pretty obvious how this could be abused.
+When you `load()` an R data file directly into your R session into the global environment, the object will, well, _load there_. So, if it has an object named `print` that's going to be in your global environment and get called when `print()` gets called. Lather/rinse/repeat for any other object name. It should be pretty obvious how this could be abused.
 
 A tad more insidious is what happens when you quit R. By default, on `quit()`, unless you specify otherwise, that function invocation will also call `.Last()` if it exists in the environment. This functionality exists in the event things need to be cleaned up. One "nice" aspect of `.`-prefixed R objects is that they're hidden by default from the environment. So, you may not even notice if an R data file you've loaded has that defined. (You likely do not check what's loaded anyway.)
 
