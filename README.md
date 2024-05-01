@@ -106,10 +106,10 @@ Example output for the `exploit.rda` file:
 
     .Last : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x11ebc5d48> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x12cb25f48> 
     quit : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x11ebc5d48> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x12cb25f48> 
 
     ------------------------------------
     Functions found: enumerating sources
@@ -158,7 +158,7 @@ $ docker build -t rdaradar:0.1.0 -t rdaradar:latest .
 Run:
 
 ``` bash
-$ docker run --rm -v "$(pwd)/exploit.rda:unsafe.rda" rdaradar 
+$ docker run --rm -v "$(pwd)/exploit.rda:/unsafe.rda" rdaradar 
 ```
 
 Example output for the `exploit.rda` file:
@@ -177,10 +177,10 @@ Example output for the `exploit.rda` file:
 
     .Last : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaacbe66568> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaac3a30568> 
     quit : function (...)  
      - attr(*, "srcref")= 'srcref' int [1:8] 1 13 6 1 13 1 1 6
-      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaacbe66568> 
+      ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0xaaaac3a30568> 
 
     ------------------------------------
     Functions found: enumerating sources

@@ -71,7 +71,7 @@ $ docker build -t rdaradar:0.1.0 -t rdaradar:latest .
 Run:
 
 ```bash
-$ docker run --rm -v "$(pwd)/exploit.rda:unsafe.rda" rdaradar 
+$ docker run --rm -v "$(pwd)/exploit.rda:/unsafe.rda" rdaradar 
 ```
 
 Example output for the `exploit.rda` file:
