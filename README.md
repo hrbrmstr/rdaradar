@@ -12,7 +12,7 @@ R](https://hiddenlayer.com/research/r-bitrary-code-execution/).
 
 They (IMO) inappropriately received a CVE assignment (CVE-2024-27322)
 for, what is, expected behavior in the deserialization of R objects via
-standard mechanisms. I am not shocked as the I am also of the opinion
+standard mechanisms. I am not shocked as I am also of the opinion
 that the current state of “CVE” in general is “busted”.
 
 There is no mention of this CVE in the release of R 4.4.0 which *did*
@@ -23,7 +23,7 @@ this CVE.
 However, the “weakness” is by no means closed.
 
 [Konrad Rudolph](https://mastodon.social/@klmr#.) and [Iakov
-Davydov](https://mstdn.science/@idavydov#.) did some ace cyber sleuthing
+Davydov](https://mstdn.science/@idavydov) did some ace cyber sleuthing
 and [figured out other ways R data file deserialization can be
 abused](https://mastodon.social/@klmr/112360501388055184). Please take a
 moment and drop a note on Mastodon to them saying “thank you”. This is
@@ -66,7 +66,7 @@ line, or R GUI. Then, load `exploit.rda`. Then, quit R/RStudio/R GUI
 effective).
 
 The main takeaway from this is DO NOT LOAD ANY R DATA FILES YOU DID NOT
-CREATE OR KNOW TRUST THE PROVENANCE OF.
+CREATE OR TRUST THE PROVENANCE OF.
 
 If you *must* take in untrusted R data files, keep reading.
 
